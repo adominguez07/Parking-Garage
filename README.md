@@ -16,19 +16,17 @@ The main data structure is a **queue implemented using a templated circularly li
 
 ## Instructions to Run the Program
 1. Open a terminal in the project folder.
-2. Compile the program with:
+2. Compile the source file with:
 
 ```bash
 g++ -std=c++17 -Wall -Wextra -pedantic main.cpp -o parking_garage
 ```
 
-3. Run the executable:
+3. Run the compiled program:
 
 ```bash
 ./parking_garage
 ```
-
-On Windows with MinGW, the executable may be named `parking_garage.exe`.
 
 ## Instructions for Using the Program
 1. Choose `1` to add a new arriving car.
