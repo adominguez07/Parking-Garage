@@ -9,9 +9,11 @@ protected:
     std::string ownerName;
 
 public:
+    // Stores the shared vehicle details used by derived classes.
     Vehicle(const std::string& plate, const std::string& owner)
         : licensePlate(plate), ownerName(owner) {}
 
+    // Enables safe cleanup through a base-class pointer.
     virtual ~Vehicle() = default;
 
     // Returns the vehicle category for display purposes.
@@ -38,6 +40,7 @@ private:
     std::string color;
 
 public:
+    // Creates a car with its plate, owner, and color information.
     Car(const std::string& plate, const std::string& owner, const std::string& carColor)
         : Vehicle(plate, owner), color(carColor) {}
 

@@ -55,6 +55,7 @@ void runSampleSimulation(ParkingGarage& garage) {
     std::cout << '\n' << garage.getStatusReport() << '\n';
 }
 
+// Starts the interactive parking garage program.
 int main() {
     ParkingGarage garage(3);
     bool keepRunning = true;

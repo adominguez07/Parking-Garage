@@ -19,8 +19,10 @@ private:
     std::size_t itemCount;
 
 public:
+    // Creates an empty circular queue.
     CircularQueue() : rear(nullptr), itemCount(0) {}
 
+    // Copies another queue while preserving item order.
     CircularQueue(const CircularQueue& other) : rear(nullptr), itemCount(0) {
         if (other.isEmpty()) {
             return;
@@ -33,6 +35,7 @@ public:
         } while (current != other.rear->next);
     }
 
+    // Replaces this queue's contents with a copy of another queue.
     CircularQueue& operator=(const CircularQueue& other) {
         if (this == &other) {
             return *this;
@@ -51,6 +54,7 @@ public:
         return *this;
     }
 
+    // Releases all dynamically allocated queue nodes.
     ~CircularQueue() {
         clear();
     }

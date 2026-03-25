@@ -14,6 +14,7 @@ private:
         Car car;
         int spotNumber;
 
+        // Stores a parked car together with its assigned spot number.
         ParkingRecord(const Car& parkedCar, int assignedSpot)
             : car(parkedCar), spotNumber(assignedSpot) {}
     };
@@ -61,6 +62,7 @@ private:
     }
 
 public:
+    // Sets the total number of parking spots available in the garage.
     explicit ParkingGarage(int totalSpots)
         : capacity(totalSpots), carsServed(0) {}
 
